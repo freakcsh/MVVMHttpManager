@@ -81,7 +81,11 @@
                 android:onClick="update"
                 android:text="检测更新"
                 android:visibility="gone" />
-
+            <Button
+                android:id="@+id/mvvm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="MVVM Fragment" />
             <Button
                 android:id="@+id/rx_view"
                 android:layout_width="match_parent"

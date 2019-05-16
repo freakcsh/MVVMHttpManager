@@ -5,7 +5,6 @@
       <module fileurl="file://$PROJECT_DIR$/MVVMHttpManager.iml" filepath="$PROJECT_DIR$/MVVMHttpManager.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/httpmanager/httpmanager.iml" filepath="$PROJECT_DIR$/httpmanager/httpmanager.iml" />
-      <module fileurl="file://$PROJECT_DIR$/mvvm/mvvm.iml" filepath="$PROJECT_DIR$/mvvm/mvvm.iml" />
     </modules>
   </component>
 </project>

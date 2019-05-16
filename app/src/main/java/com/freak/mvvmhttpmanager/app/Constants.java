@@ -21,5 +21,7 @@ public class Constants {
     public static final String COOKIE = "cookie";
     public static final Object EVENT_KEY_WORK = "EVENT_KEY_WORK";
     public static final Object EVENT_KEY_WORK1 = "EVENT_KEY_WORK1";
+    public static final Object EVENT_KEY_WORK_FRAGMENT = "EVENT_KEY_WORK_FRAGMENT";
+    public static final Object EVENT_KEY_WORK1_FRAGMENT = "EVENT_KEY_WORK1_FRAGMENT";
 
 }

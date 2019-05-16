@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+        <variable
+            name="login"
+            type="com.freak.mvvmhttpmanager.mvvm.activity.model.LoginBean" />
+        <import type="android.text.TextUtils" />
+    </data>
+
+    <android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:context=".MainActivity">
+
+            <Button
+                android:id="@+id/login_mvvm_s"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="请求接口(不抽取返回结果封装)"
+                android:visibility="visible" />
+
+            <Button
+                android:id="@+id/login_mvvm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="请求接口(抽取返回结果封装)" />
+
+
+
+            <EditText
+                android:id="@+id/mvvm_username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="freak" />
+
+            <EditText
+                android:id="@+id/mvvm_pwd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="123456" />
+
+            <TextView
+                android:id="@+id/mvvm_result"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text='@{TextUtils.isEmpty(login.userName) ? "-":login.userName}' />
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</layout>
