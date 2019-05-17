@@ -18,6 +18,11 @@
             </intent-filter>
         </activity>
         <activity android:name=".mvvm.fregment.MVVMFragmentActivity"/>
+        <activity android:name=".down.DownActivity"/>
+        <activity android:name=".down.SystemDownloadActivity"/>
+        <activity android:name=".down.DownTaskListActivity"/>
+
+        <receiver android:name=".down.DownLoadCompleteReceiver"/>
     </application>
 
 </manifest>
