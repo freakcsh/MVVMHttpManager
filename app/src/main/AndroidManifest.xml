@@ -17,12 +17,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".mvvm.fregment.MVVMFragmentActivity"/>
-        <activity android:name=".down.DownActivity"/>
-        <activity android:name=".down.SystemDownloadActivity"/>
-        <activity android:name=".down.DownTaskListActivity"/>
+        <activity android:name=".mvvm.fregment.MVVMFragmentActivity" />
+        <activity android:name=".down.DownActivity" />
+        <activity android:name=".down.SystemDownloadActivity" />
+        <activity android:name=".down.DownTaskListActivity" />
 
-        <receiver android:name=".down.DownLoadCompleteReceiver"/>
+        <receiver android:name=".down.DownLoadCompleteReceiver" />
+        <activity android:name=".mvvm.adapter.view.MVVMRecycleViewActivity" />
+        <activity android:name=".mvvm.moredatabinding.view.MoreDatabindingActivity"/>
     </application>
 
 </manifest>

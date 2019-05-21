@@ -15,4 +15,8 @@ public class MVVMRecycleViewViewModel extends BaseViewModel<MVVMRecycleViewRepos
     public MVVMRecycleViewViewModel(@NonNull Application application) {
         super(application);
     }
+
+    public void getList() {
+        mRepository.getList();
+    }
 }

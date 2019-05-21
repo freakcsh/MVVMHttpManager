@@ -23,5 +23,9 @@ public class Constants {
     public static final Object EVENT_KEY_WORK1 = "EVENT_KEY_WORK1";
     public static final Object EVENT_KEY_WORK_FRAGMENT = "EVENT_KEY_WORK_FRAGMENT";
     public static final Object EVENT_KEY_WORK1_FRAGMENT = "EVENT_KEY_WORK1_FRAGMENT";
+    public static final Object LIST = "LIST";
+    public static final Object DIALOG = "DIALOG";
+    public static final Object MORE = "MORE";
+    public static final Object MORE1 = "MORE1";
 
 }

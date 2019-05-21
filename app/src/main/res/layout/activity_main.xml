@@ -91,6 +91,23 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="RxView" />
+            <Button
+                android:id="@+id/recycle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="MVVM RecycleView" />
+
+            <Button
+                android:id="@+id/dialog"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="MVVM Dialog" />
+
+            <Button
+                android:id="@+id/more_data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="MORE DATA MODEL" />
 
             <Button
                 android:layout_width="match_parent"

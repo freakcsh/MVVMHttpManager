@@ -18,7 +18,11 @@ import com.freak.mvvmhttpmanager.base.activity.AbstractLifecycleWithDatabindingA
 import com.freak.mvvmhttpmanager.databinding.ActivityMainBinding;
 import com.freak.mvvmhttpmanager.mvvm.activity.model.LoginBean;
 import com.freak.mvvmhttpmanager.mvvm.activity.viewmodel.MainViewModel;
+import com.freak.mvvmhttpmanager.mvvm.adapter.view.MVVMRecycleViewActivity;
+import com.freak.mvvmhttpmanager.mvvm.dialog.view.CommonDialogFragment;
 import com.freak.mvvmhttpmanager.mvvm.fregment.MVVMFragmentActivity;
+import com.freak.mvvmhttpmanager.mvvm.moredatabinding.view.MoreDatabindingActivity;
+import com.freak.mvvmhttpmanager.util.DialogUtils;
 import com.freak.mvvmhttpmanager.util.StateUtil;
 
 
@@ -26,14 +30,13 @@ import com.freak.mvvmhttpmanager.util.StateUtil;
  * @author Freak
  * @date 2019/5/15
  */
-public class MainActivity extends AbstractLifecycleWithDatabindingActivity<MainViewModel,ActivityMainBinding> implements View.OnClickListener {
+public class MainActivity extends AbstractLifecycleWithDatabindingActivity<MainViewModel, ActivityMainBinding> implements View.OnClickListener {
     private final static String TAG = "MainActivity";
     private EditText username, pwd;
     private TextView tvResult;
-
     private Button rx_view;
-//    private ActivityMainBinding mActivityMainBinding;
-
+    private Button recycle;
+    private Button dialog;
 
     @Override
     protected int getLayoutId() {
@@ -48,11 +51,12 @@ public class MainActivity extends AbstractLifecycleWithDatabindingActivity<MainV
 
     @Override
     protected void initView() {
-//        mActivityMainBinding= DataBindingUtil.setContentView(this,R.layout.activity_main);
-
         findViewById(R.id.login).setOnClickListener(this);
         findViewById(R.id.login_s).setOnClickListener(this);
         findViewById(R.id.mvvm).setOnClickListener(this);
+        findViewById(R.id.recycle).setOnClickListener(this);
+        findViewById(R.id.dialog).setOnClickListener(this);
+        findViewById(R.id.more_data).setOnClickListener(this);
         username = findViewById(R.id.username);
         rx_view = findViewById(R.id.rx_view);
         pwd = findViewById(R.id.pwd);
@@ -95,6 +99,25 @@ public class MainActivity extends AbstractLifecycleWithDatabindingActivity<MainV
                 break;
             case R.id.mvvm:
                 startActivity(new Intent(this, MVVMFragmentActivity.class));
+                break;
+            case R.id.recycle:
+                startActivity(new Intent(this, MVVMRecycleViewActivity.class));
+                break;
+            case R.id.dialog:
+                DialogUtils.showCommonDialog(this, new CommonDialogFragment.OnTipsListener() {
+                    @Override
+                    public void onCancel() {
+                        LogUtil.e("取消");
+                    }
+
+                    @Override
+                    public void onSuccess() {
+                        LogUtil.e("确定");
+                    }
+                });
+                break;
+            case R.id.more_data:
+                startActivity(new Intent(this, MoreDatabindingActivity.class));
                 break;
             default:
                 break;

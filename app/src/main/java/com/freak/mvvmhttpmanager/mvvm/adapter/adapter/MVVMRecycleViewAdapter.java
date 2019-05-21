@@ -22,7 +22,7 @@ public class MVVMRecycleViewAdapter extends BaseQuickAdapter<MVVMRecycleViewMode
     @Override
     protected void convert(BaseViewHolder helper, MVVMRecycleViewModel item) {
         ItemRecycleviewBinding binding = DataBindingUtil.bind(helper.itemView);
-        binding.setAdapter(item);
+        binding.setAdapterViewModel(item);
         binding.executePendingBindings();
     }
 }

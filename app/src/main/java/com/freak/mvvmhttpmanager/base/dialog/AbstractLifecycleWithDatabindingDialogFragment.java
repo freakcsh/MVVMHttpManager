@@ -3,6 +3,8 @@ package com.freak.mvvmhttpmanager.base.dialog;
 import android.arch.lifecycle.ViewModel;
 import android.arch.lifecycle.ViewModelProviders;
 import android.content.Context;
+import android.databinding.DataBindingUtil;
+import android.databinding.ViewDataBinding;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -30,7 +32,7 @@ import com.freak.mvvmhttpmanager.R;
  */
 
 @SuppressWarnings("ALL")
-public abstract class AbstractLifecycleDialogFragment<T extends BaseViewModel> extends DialogFragment {
+public abstract class AbstractLifecycleWithDatabindingDialogFragment<T extends BaseViewModel, D extends ViewDataBinding> extends DialogFragment {
 
 
     @Override
@@ -45,6 +47,7 @@ public abstract class AbstractLifecycleDialogFragment<T extends BaseViewModel> e
     }
 
     protected T mViewModel;
+    protected D mDataBinding;
     protected View mView;
     protected FragmentActivity mActivity;
     protected boolean mIsFirstVisible = true;
@@ -82,6 +85,7 @@ public abstract class AbstractLifecycleDialogFragment<T extends BaseViewModel> e
         super.onAttach(context);
     }
 
+
     @Override
     public void onStart() {
         super.onStart();
@@ -103,7 +107,10 @@ public abstract class AbstractLifecycleDialogFragment<T extends BaseViewModel> e
         getDialog().setCanceledOnTouchOutside(false);
         final Window window = getDialog().getWindow();
         assert window != null;
-        mView = inflater.inflate(getLayoutId(), ((ViewGroup) window.findViewById(android.R.id.content)), false);
+
+        mDataBinding = DataBindingUtil.inflate(inflater, getLayoutId(), ((ViewGroup) window.findViewById(android.R.id.content)), false);
+        mView = mDataBinding.getRoot();
+//        mView = inflater.inflate(getLayoutId(), ((ViewGroup) window.findViewById(android.R.id.content)),false);
         mViewModel = viewModelProviders(this, (Class<T>) TUtil.getInstance(this, 0));
         if (null != mViewModel) {
             dataObserver();
@@ -117,7 +124,7 @@ public abstract class AbstractLifecycleDialogFragment<T extends BaseViewModel> e
      *
      * @return ViewModel
      */
-    protected <T extends ViewModel> T viewModelProviders(AbstractLifecycleDialogFragment fragment, @NonNull Class<T> modelClass) {
+    protected <T extends ViewModel> T viewModelProviders(AbstractLifecycleWithDatabindingDialogFragment fragment, @NonNull Class<T> modelClass) {
         return ViewModelProviders.of(fragment).get(modelClass);
     }
 

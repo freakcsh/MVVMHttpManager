@@ -1,12 +1,13 @@
 package com.freak.mvvmhttpmanager.app;
 
 
-
 import com.freak.mvvmhttpmanager.bean.BaseBean;
-
 import com.freak.mvvmhttpmanager.bean.LoginEntity;
 import com.freak.mvvmhttpmanager.bean.LoginStatusEntity;
 import com.freak.mvvmhttpmanager.mvvm.activity.model.LoginBean;
+import com.freak.mvvmhttpmanager.mvvm.dialog.model.DialogModel;
+import com.freak.mvvmhttpmanager.mvvm.moredatabinding.model.MoreDataBindingModel;
+import com.freak.mvvmhttpmanager.mvvm.moredatabinding.model.MoreDataBindingModel2;
 import com.freak.mvvmhttpmanager.net.response.HttpResult;
 import com.google.gson.JsonObject;
 
@@ -52,14 +53,22 @@ public interface ApiServer {
 
     @POST("/login")
     Observable<HttpResult<LoginBean>> login5(@Query("userName") String userName,
-                                           @Query("pwd") String pwd);
+                                             @Query("pwd") String pwd);
+
+    @POST("/list")
+    Observable<HttpResult> getList();
+
+    @POST("/dialogMessage")
+    Observable<HttpResult<DialogModel>> getDialogMessage();
 
     @POST("/app/user/login")
     Observable<BaseBean> login3(@Query("user_mobile") String user_mobile,
                                 @Query("user_password") String user_password);
+
     @POST("/app/user/login")
     Observable<HttpResult<LoginBean>> login6(@Query("user_mobile") String user_mobile,
-                                @Query("user_password") String user_password);
+                                             @Query("user_password") String user_password);
+
     /**
      * apk文件下载
      *
@@ -100,4 +109,10 @@ public interface ApiServer {
     @Multipart
     @POST("uploading1")
     Observable<HttpResult> uploadingUserPhoto(@Part MultipartBody.Part body);
+
+    @POST("/moreDataBinding")
+    Observable<HttpResult<MoreDataBindingModel>> getMoreDataBinding();
+
+    @POST("/moreDataBinding1")
+    Observable<HttpResult<MoreDataBindingModel2>> getMoreDataBinding1();
 }
