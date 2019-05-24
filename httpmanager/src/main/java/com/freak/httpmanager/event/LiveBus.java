@@ -19,12 +19,14 @@ import java.util.concurrent.ConcurrentHashMap;
  * <p>
  * <p>
  * LiveBus.getDefault().subscribe("LiveData").observe(this, new Observer<Object>() {
- *
- * @author Freak
- * @Override public void onChanged(@Nullable Object o) {
+ * <p>
+ * public void onChanged(@Nullable Object o) {
  * Log.e("onChanged",((String)o));
  * }
  * });
+ * * @author Freak
+ *
+ * @Override
  * @date 2019/5/15
  */
 @SuppressWarnings("ALL")
