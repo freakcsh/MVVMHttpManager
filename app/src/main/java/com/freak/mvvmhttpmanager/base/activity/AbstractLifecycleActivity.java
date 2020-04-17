@@ -12,7 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModel;
-import androidx.lifecycle.ViewModelProviders;
+import androidx.lifecycle.ViewModelProvider;
 
 import com.freak.httpmanager.BaseViewModel;
 import com.freak.httpmanager.utils.TUtil;
@@ -81,7 +81,7 @@ public abstract class AbstractLifecycleActivity<T extends BaseViewModel> extends
     }
 
     protected <T extends ViewModel> T viewModelProviders(AppCompatActivity fragment, @NonNull Class modelClass) {
-        return (T) ViewModelProviders.of(fragment).get(modelClass);
+        return (T) new ViewModelProvider(fragment).get(modelClass);
     }
 
     @Override
