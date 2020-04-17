@@ -1,18 +1,20 @@
 package com.freak.mvvmhttpmanager.base.fragment;
 
-import android.arch.lifecycle.ViewModel;
-import android.arch.lifecycle.ViewModelProviders;
+
 import android.content.Context;
-import android.databinding.DataBindingUtil;
-import android.databinding.ViewDataBinding;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.databinding.DataBindingUtil;
+import androidx.databinding.ViewDataBinding;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
+import androidx.lifecycle.ViewModel;
+import androidx.lifecycle.ViewModelProvider;
 
 import com.freak.httpmanager.BaseViewModel;
 import com.freak.httpmanager.utils.TUtil;
@@ -86,7 +88,7 @@ public abstract class AbstractLifecycleWithDatabindingFragment<T extends BaseVie
      * @return ViewModel
      */
     protected <T extends ViewModel> T viewModelProviders(AbstractLifecycleWithDatabindingFragment fragment, @NonNull Class<T> modelClass) {
-        return ViewModelProviders.of(fragment).get(modelClass);
+        return new ViewModelProvider(fragment).get(modelClass);
     }
 
     @Override

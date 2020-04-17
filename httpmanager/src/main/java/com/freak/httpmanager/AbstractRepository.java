@@ -1,6 +1,7 @@
 package com.freak.httpmanager;
 
-import android.arch.lifecycle.MutableLiveData;
+
+import androidx.lifecycle.MutableLiveData;
 
 import org.reactivestreams.Subscriber;
 

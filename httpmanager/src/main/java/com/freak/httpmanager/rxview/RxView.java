@@ -1,9 +1,10 @@
 package com.freak.httpmanager.rxview;
 
 import android.annotation.SuppressLint;
-import android.support.annotation.CheckResult;
-import android.support.annotation.NonNull;
 import android.view.View;
+
+import androidx.annotation.CheckResult;
+import androidx.annotation.NonNull;
 
 import java.util.concurrent.TimeUnit;
 
@@ -12,7 +13,7 @@ import io.reactivex.ObservableEmitter;
 import io.reactivex.ObservableOnSubscribe;
 import io.reactivex.functions.Consumer;
 
-import static android.support.v4.util.Preconditions.checkNotNull;
+import static com.freak.httpmanager.rxview.Preconditions.checkNotNull;
 import static com.freak.httpmanager.rxview.Preconditions.checkUiThread;
 
 

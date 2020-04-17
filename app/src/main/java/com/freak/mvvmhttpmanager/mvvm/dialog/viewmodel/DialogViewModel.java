@@ -1,7 +1,8 @@
 package com.freak.mvvmhttpmanager.mvvm.dialog.viewmodel;
 
 import android.app.Application;
-import android.support.annotation.NonNull;
+
+import androidx.annotation.NonNull;
 
 import com.freak.httpmanager.BaseViewModel;
 import com.freak.mvvmhttpmanager.mvvm.dialog.repository.DialogRepository;

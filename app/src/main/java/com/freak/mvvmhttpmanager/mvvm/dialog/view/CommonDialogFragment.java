@@ -1,9 +1,12 @@
 package com.freak.mvvmhttpmanager.mvvm.dialog.view;
 
-import android.arch.lifecycle.Observer;
-import android.support.annotation.Nullable;
+
+import android.annotation.SuppressLint;
 import android.view.View;
 import android.widget.TextView;
+
+import androidx.annotation.Nullable;
+import androidx.lifecycle.Observer;
 
 import com.freak.httpmanager.event.LiveBus;
 import com.freak.mvvmhttpmanager.R;
@@ -62,6 +65,7 @@ public class CommonDialogFragment extends AbstractLifecycleWithDatabindingDialog
         });
     }
 
+    @SuppressLint("WrongConstant")
     @Override
     protected void initView() {
         setStyle(R.style.dialog,0);

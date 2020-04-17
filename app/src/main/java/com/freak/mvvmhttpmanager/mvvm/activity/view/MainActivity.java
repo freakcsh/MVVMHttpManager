@@ -1,14 +1,15 @@
 package com.freak.mvvmhttpmanager.mvvm.activity.view;
 
 
-import android.arch.lifecycle.Observer;
 import android.content.Intent;
-import android.support.annotation.Nullable;
-import android.support.v4.content.ContextCompat;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import androidx.annotation.Nullable;
+import androidx.core.content.ContextCompat;
+import androidx.lifecycle.Observer;
 
 import com.freak.httpmanager.event.LiveBus;
 import com.freak.httpmanager.log.LogUtil;

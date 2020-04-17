@@ -22,7 +22,7 @@ import io.reactivex.disposables.Disposable;
 
 public class MVVMRepository extends BaseRepository {
     public void doLogin1(String userName, String pwd) {
-        Flowable flowable = apiService.login2(userName, pwd).map(new HttpResultFunc<LoginBean>());
+        Flowable<LoginBean> flowable = apiService.login2(userName, pwd).map(new HttpResultFunc<LoginBean>());
         addDisposable((Disposable) addSubscriber(flowable, new DisposableSubscriberCallBack<LoginBean>(new ApiCallback<LoginBean>() {
             @Override
             public void onSuccess(LoginBean model) {

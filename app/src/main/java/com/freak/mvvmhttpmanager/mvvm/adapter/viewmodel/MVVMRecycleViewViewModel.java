@@ -1,7 +1,7 @@
 package com.freak.mvvmhttpmanager.mvvm.adapter.viewmodel;
 
 import android.app.Application;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import com.freak.httpmanager.BaseViewModel;
 import com.freak.mvvmhttpmanager.mvvm.adapter.repository.MVVMRecycleViewRepository;

@@ -1,7 +1,7 @@
 package com.freak.mvvmhttpmanager.mvvm.moredatabinding.view;
 
-import android.arch.lifecycle.Observer;
-import android.support.annotation.Nullable;
+
+import androidx.annotation.Nullable;
 
 import com.freak.httpmanager.event.LiveBus;
 import com.freak.mvvmhttpmanager.R;

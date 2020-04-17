@@ -1,21 +1,23 @@
 package com.freak.mvvmhttpmanager.base.dialog;
 
-import android.arch.lifecycle.ViewModel;
-import android.arch.lifecycle.ViewModelProviders;
+
 import android.content.Context;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v4.app.DialogFragment;
-import android.support.v4.app.FragmentActivity;
-import android.support.v4.app.FragmentManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.DialogFragment;
+import androidx.fragment.app.FragmentActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.lifecycle.ViewModel;
+import androidx.lifecycle.ViewModelProvider;
 
 import com.freak.httpmanager.BaseViewModel;
 import com.freak.httpmanager.utils.TUtil;
@@ -118,7 +120,7 @@ public abstract class AbstractLifecycleDialogFragment<T extends BaseViewModel> e
      * @return ViewModel
      */
     protected <T extends ViewModel> T viewModelProviders(AbstractLifecycleDialogFragment fragment, @NonNull Class<T> modelClass) {
-        return ViewModelProviders.of(fragment).get(modelClass);
+        return new ViewModelProvider(fragment).get(modelClass);
     }
 
     @Override

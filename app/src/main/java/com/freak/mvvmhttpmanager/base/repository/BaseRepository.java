@@ -15,9 +15,7 @@ public class BaseRepository extends AbstractRepository {
 
 
     public BaseRepository() {
-        if (null == apiService) {
-            apiService = HttpMethods.getInstance().create(ApiServer.class);
-        }
+        apiService = HttpMethods.getInstance().create(ApiServer.class);
     }
 
 

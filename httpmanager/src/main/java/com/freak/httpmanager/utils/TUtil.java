@@ -1,6 +1,6 @@
 package com.freak.httpmanager.utils;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import java.lang.reflect.ParameterizedType;
 

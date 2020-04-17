@@ -1,8 +1,9 @@
 package com.freak.mvvmhttpmanager.mvvm.fregment;
 
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
-import android.support.v4.content.ContextCompat;
+
+import androidx.core.content.ContextCompat;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.freak.mvvmhttpmanager.R;
 import com.freak.mvvmhttpmanager.base.activity.AbstractSimpleActivity;

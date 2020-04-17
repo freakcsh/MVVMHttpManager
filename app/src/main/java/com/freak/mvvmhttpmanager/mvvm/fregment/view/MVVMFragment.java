@@ -1,10 +1,12 @@
 package com.freak.mvvmhttpmanager.mvvm.fregment.view;
 
-import android.arch.lifecycle.Observer;
-import android.support.annotation.Nullable;
+
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import androidx.annotation.Nullable;
+import androidx.lifecycle.Observer;
 
 import com.freak.httpmanager.event.LiveBus;
 import com.freak.httpmanager.log.LogUtil;
@@ -20,7 +22,7 @@ import com.freak.mvvmhttpmanager.mvvm.fregment.viewmodel.MVVMViewModel;
  * @date 2019/5/16.
  */
 
-public class MVVMFragment extends AbstractLifecycleWithDatabindingFragment<MVVMViewModel,FragmentMvvmBinding> implements View.OnClickListener {
+public class MVVMFragment extends AbstractLifecycleWithDatabindingFragment<MVVMViewModel, FragmentMvvmBinding> implements View.OnClickListener {
     private EditText username, pwd;
 
     private TextView mvvm_result;

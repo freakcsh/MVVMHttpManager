@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/MVVMHttpManager.iml" filepath="$PROJECT_DIR$/MVVMHttpManager.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/httpmanager/httpmanager.iml" filepath="$PROJECT_DIR$/httpmanager/httpmanager.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MVVMHttpManager.iml" filepath="$PROJECT_DIR$/MVVMHttpManager.iml" group="MVVMHttpManager" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="MVVMHttpManager/app" />
+      <module fileurl="file://$PROJECT_DIR$/httpmanager/httpmanager.iml" filepath="$PROJECT_DIR$/httpmanager/httpmanager.iml" group="MVVMHttpManager/httpmanager" />
     </modules>
   </component>
 </project>

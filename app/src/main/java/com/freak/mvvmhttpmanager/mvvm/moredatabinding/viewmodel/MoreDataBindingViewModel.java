@@ -1,7 +1,7 @@
 package com.freak.mvvmhttpmanager.mvvm.moredatabinding.viewmodel;
 
 import android.app.Application;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import com.freak.httpmanager.BaseViewModel;
 import com.freak.mvvmhttpmanager.mvvm.moredatabinding.repostitory.MoreDataBindingRepository;

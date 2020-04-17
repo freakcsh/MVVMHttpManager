@@ -1,6 +1,6 @@
 package com.freak.mvvmhttpmanager.util;
 
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.freak.mvvmhttpmanager.mvvm.dialog.view.CommonDialogFragment;
 
